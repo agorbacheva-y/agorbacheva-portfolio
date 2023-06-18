@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 const Appbar = () => {
   const navItems = ['Home', 'About', 'Projects', 'Contact'];
 
-  const [ appbar, setAppbar ] = useState(null);
+  const [ appbar, setAppbar ] = useState(false);
 
   const handleAppbar = () => {
     setAppbar((prevState) => !prevState);
