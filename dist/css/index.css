@@ -7,6 +7,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* LAYOUT */
 .center {
   display: flex;
   flex-direction: column;
@@ -16,6 +17,11 @@
   margin: 1rem;
   max-width: 100%;
   min-height: 100vh;
+}
+
+/* HOME */
+.home {
+  border: 1px solid red;
 }
 
 .bold {
@@ -32,4 +38,18 @@
 .last-name {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+/* TITLE */
+.title {
+  color: #333745;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* ABOUT ME */
+.aboutme {
+  border: 1px solid green;
+  text-align: center;
+  margin: 2rem;
 }/*# sourceMappingURL=index.css.map */
