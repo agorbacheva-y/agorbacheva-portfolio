@@ -44,7 +44,7 @@
 .title {
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   position: relative;
   display: inline-block;
 }
@@ -65,6 +65,11 @@
 .aboutme {
   border: 1px solid green;
   text-align: center;
+}
+
+.aboutme__text {
+  max-width: 80%;
+  margin: auto;
 }
 
 /* SKILLS */

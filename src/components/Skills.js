@@ -6,13 +6,13 @@ import Title from "./Title";
 const Skills = () => {
 
   const icons = [
-    {icon: FaHtml5, name: "HTML"},
-    {icon: FaCss3Alt, name: "CSS"},
-    {icon: FaSass, name: "Sass"},
-    {icon: SiJavascript, name: "JavaScript"},
-    {icon: FaReact, name: "React"},
-    {icon: FaFigma, name: "Figma"},
-    {icon: FaWindows, name: "Windows"}
+    {icon: FaHtml5, name: "HTML", id: 1},
+    {icon: FaCss3Alt, name: "CSS", id: 2},
+    {icon: FaSass, name: "Sass", id: 3},
+    {icon: SiJavascript, name: "JavaScript", id: 4},
+    {icon: FaReact, name: "React", id: 5},
+    {icon: FaFigma, name: "Figma", id: 6},
+    {icon: FaWindows, name: "Windows", id: 7}
   ];
 
    return (
@@ -21,14 +21,12 @@ const Skills = () => {
       <div className="skills__container">
         {icons.map(arr => {
           return (
-            
-              <ul className="skills__list">
-                <li className="skills__icon">
-                  <Icon component={arr.icon} />
-                  {arr.name}
-                </li>
-              </ul>
-            
+            <ul key={arr.id} className="skills__list">
+              <li className="skills__icon">
+                <Icon component={arr.icon} />
+                {arr.name}
+              </li>
+            </ul>
           );
         })}
       </div>
