@@ -44,23 +44,22 @@
 
 /* TITLE */
 .title {
-  color: v.$main-txt-color;
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
-  color: v.$main-color;
 }
 
 .title:before {
   content: "";
-  background-color: white;
-  height: 0.25em;
-  width: calc( 100% + 60px );
+  background-color: v.$main-color;
+  box-shadow: 0 0 5px 3px v.$main-color;
+  height: 0.25rem;
+  width: calc( 100% + 20px );
   position: absolute;
-  bottom: 0.15em;
-  left: -10px;
+  bottom: 0.5rem;
+  left: -0.5rem;
   z-index: -1;
 }
 
