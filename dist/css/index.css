@@ -65,5 +65,19 @@
 .aboutme {
   border: 1px solid green;
   text-align: center;
-  margin: 2rem;
+}
+
+/* SKILLS */
+.skills {
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list {
+  list-style: none;
 }/*# sourceMappingURL=index.css.map */
