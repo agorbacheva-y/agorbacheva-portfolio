@@ -18,19 +18,20 @@ const Skills = () => {
    return (
     <div className="skills">
       <Title>Skills</Title>
-
-      {icons.map(arr => {
-        return (
-          <div className="skills-container">
-            <ul className="skills-list">
-              <li>
-                <Icon component={arr.icon} />
-                {arr.name}
-              </li>
-            </ul>
-          </div>
-        );
-      })}
+      <div className="skills__container">
+        {icons.map(arr => {
+          return (
+            
+              <ul className="skills__list">
+                <li className="skills__icon">
+                  <Icon component={arr.icon} />
+                  {arr.name}
+                </li>
+              </ul>
+            
+          );
+        })}
+      </div>
     </div>
   );
 };
