@@ -20,10 +20,13 @@ const Projects = () => {
               <button>Web Speech API</button>
             </div>
             <div>
-              <button>View live</button>
-              <button>See code</button>
+              <a href='https://kids-learning-game.netlify.app/' target="blank">
+                <button>View live</button>
+              </a>
+              <a href='https://github.com/agorbacheva-y/kids-learning-game.git' target="blank">
+                <button>See code</button>
+              </a>
             </div>
-            
           </div>
         </div>  
       </div>
