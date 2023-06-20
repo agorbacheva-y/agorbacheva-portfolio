@@ -102,4 +102,38 @@
 .projects {
   text-align: center;
   border: 1px solid orange;
+}
+
+.project__container {
+  position: relative;
+  max-width: 200px;
+  min-height: 300px;
+  margin: auto;
+}
+
+.project__img {
+  max-width: 200px;
+  min-height: 300px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.project__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #333745;
+  border-radius: 20px;
+}
+
+.project__container:hover .project__overlay {
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */
