@@ -139,3 +139,11 @@
 .project__container:hover .project__overlay {
   opacity: 1;
 }
+
+.project__text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  text-align: center;
+}
