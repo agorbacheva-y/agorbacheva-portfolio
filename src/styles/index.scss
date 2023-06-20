@@ -108,15 +108,14 @@
 
 .project__container {
   position: relative;
-  max-width: 200px;
-  min-height: 300px;
+  max-width: 250px;
+  min-height: 400px;
   margin: auto;
-
 }
 
 .project__img {
-  max-width: 200px;
-  min-height: 300px;
+  max-width: 250px;
+  min-height: 400px;
   border-radius: 20px;
   object-fit: cover;
   display: block;
@@ -143,7 +142,6 @@
 .project__text {
   color: white;
   position: absolute;
-  top: 50%;
-  bottom: 50%;
   text-align: center;
+  margin: 0.5rem;
 }
