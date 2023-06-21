@@ -1,5 +1,6 @@
 import Title from "./Title";
 import TextField from "@mui/material/TextField";
+import CustomTextField from "./CustomTextField";
 
 const Contact = () => {
   return (
@@ -8,9 +9,9 @@ const Contact = () => {
 
       <div>
         <form>
-          <TextField label="Name" required margin="dense" />
-          <TextField label="Email" required margin="dense" />
-          <TextField label="Message" multiline rows={4} margin="dense" />
+          <CustomTextField label="Name" required margin="dense" />
+          <CustomTextField label="Email" required margin="dense" />
+          <CustomTextField label="Message" multiline rows={4} margin="dense" />
         </form>
       </div>
     </div>
