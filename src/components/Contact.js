@@ -19,6 +19,13 @@ const Contact = () => {
     e.preventDefault();
 
     console.log(inputValue.fullName, inputValue.email, inputValue.message)
+
+    clearInput();
+    setInputValue({ fullName: "", email: "", message: "" });
+  };
+
+  const clearInput = () => {
+    setInputValue({ fullName: "", email: "", message: "" })
   };
 
   return (
@@ -66,3 +73,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// cant clear input after submit...
