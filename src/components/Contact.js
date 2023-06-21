@@ -4,22 +4,13 @@ import CustomTextField from "./CustomTextField";
 import FormControl from "@mui/material/FormControl";
 
 const Contact = () => {
-  const [ inputValue, setInputValue ] = useState({
-    fullName: "",
-    email: "",
-    message: ""
-  });
-
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    console.log(`Name: ${inputValue.fullName}, Email: ${inputValue.email}, Message: ${inputValue.message}` );
-
-    setInputValue({ ...inputValue, [name]: value });
-  };
+  const [ fullName, setFullName ] = useState("");
+  const [ email, setEmail ] = useState("");
+  const [ message, setMessage ] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(fullName, email, message);
   };
 
   return (
@@ -30,33 +21,34 @@ const Contact = () => {
         <form className="form" onSubmit={handleSubmit}>
           <CustomTextField 
             type="text"
-            id="name"
             label="Name" 
             required 
             margin="dense" 
             fullWidth 
-            value={inputValue.fullName}
-            name="name"
-            onChange={handleChange}
+            value={fullName}
+            name="fullName"
+            onChange={(e) => setFullName(e.target.value)}
           />
           <CustomTextField 
+            type="text"
             label="Email" 
             required 
             margin="dense" 
             fullWidth 
-            value={inputValue.email}
+            value={email}
             name="email"
-            onChange={handleChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <CustomTextField 
+            type="text"
             label="Message" 
             multiline 
             rows={4} 
             margin="dense" 
             fullWidth 
-            defaultValue={inputValue.message}
+            defaultValue={message}
             name="message"
-            onChange={handleChange}
+            onChange={(e) => setMessage(e.target.value)}
           />
           <button type="submit">Submit</button>
         </form>
