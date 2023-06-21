@@ -108,7 +108,7 @@
   position: relative;
   max-width: 300px;
   min-height: 400px;
-  margin: 1rem;
+  margin: auto;
 }
 
 .project__img {
@@ -126,8 +126,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
+  max-width: 300px;
+  min-height: 400px;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #333745;
@@ -138,11 +138,17 @@
   opacity: 1;
 }
 
-.project__text {
-  color: white;
+.project__overlay__text {
   position: absolute;
   text-align: center;
+}
+
+.project__title {
+  color: white;
   margin: 1rem;
+}
+.project__title h4 {
+  font-weight: 700;
 }
 
 .project__tech__container {
