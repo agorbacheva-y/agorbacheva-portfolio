@@ -1,16 +1,24 @@
 import { useState } from "react";
 import Title from "./Title";
 import CustomTextField from "./CustomTextField";
-import FormControl from "@mui/material/FormControl";
 
 const Contact = () => {
-  const [ fullName, setFullName ] = useState("");
-  const [ email, setEmail ] = useState("");
-  const [ message, setMessage ] = useState("");
+  // store input
+  const [ inputValue, setInputValue ] = useState({
+    fullName: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInputValue((prevInputValue) => ({ ...prevInputValue, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(fullName, email, message);
+
+    console.log(inputValue.fullName, inputValue.email, inputValue.message)
   };
 
   return (
@@ -25,9 +33,9 @@ const Contact = () => {
             required 
             margin="dense" 
             fullWidth 
-            value={fullName}
+            defaultValue={inputValue.fullName}
             name="fullName"
-            onChange={(e) => setFullName(e.target.value)}
+            onChange={handleChange}
           />
           <CustomTextField 
             type="text"
@@ -35,9 +43,9 @@ const Contact = () => {
             required 
             margin="dense" 
             fullWidth 
-            value={email}
+            defaultValue={inputValue.email}
             name="email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleChange}
           />
           <CustomTextField 
             type="text"
@@ -46,9 +54,9 @@ const Contact = () => {
             rows={4} 
             margin="dense" 
             fullWidth 
-            defaultValue={message}
+            defaultValue={inputValue.message}
             name="message"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={handleChange}
           />
           <button type="submit">Submit</button>
         </form>
