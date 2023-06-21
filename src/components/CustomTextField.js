@@ -11,7 +11,7 @@ const CustomTextField = ({ label, required, margin, multiline, rows }) => {
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
-        borderColor: '#00CECB',
+        borderColor: '#333745',
       },
       '&:hover fieldset': {
         borderColor: '#00CECB',
