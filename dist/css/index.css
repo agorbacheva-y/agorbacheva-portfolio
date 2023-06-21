@@ -167,7 +167,13 @@
   margin: 0.5rem;
 }
 
+/* CONTACT */
 .contact {
   text-align: center;
   border: 1px solid purple;
+}
+
+.form {
+  max-width: 80%;
+  margin: auto;
 }/*# sourceMappingURL=index.css.map */

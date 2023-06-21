@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 
-const CustomTextField = ({ label, required, margin, multiline, rows }) => {
+const CustomTextField = ({ type, id, label, required, margin, multiline, rows, fullWidth, defaultValue, name }) => {
   const InputField = styled(TextField) ({
     '& label.Mui-focused': {
       color: '#00CECB',
@@ -24,7 +24,18 @@ const CustomTextField = ({ label, required, margin, multiline, rows }) => {
 
   return (
     <div>
-      <InputField label={label} required={required} margin={margin} multiline={multiline} rows={rows} />
+      <InputField 
+        type={type}
+        id={id}
+        label={label} 
+        required={required} 
+        margin={margin} 
+        multiline={multiline} 
+        rows={rows}
+        fullWidth={fullWidth}
+        defaultValue={defaultValue}
+        name={name}
+      />
     </div>
   );
 };
