@@ -178,3 +178,20 @@
   max-width: 80%;
   margin: auto;
 }
+
+/* FORM SENT */
+.formsent-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+  display: flex;
+  border: 1px solid red;
+}
+
+.formsent-text {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 2rem;
+  display: flex;
+}
