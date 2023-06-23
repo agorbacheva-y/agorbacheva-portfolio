@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Title from "./Title";
 import CustomTextField from "./CustomTextField";
+import CustomButton from "./CustomButton";
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/c27aab20-10dd-11ee-a6b0-17653bd30bd3";
 
@@ -84,7 +85,7 @@ const Contact = () => {
             name="message"
             onChange={handleChange}
           />
-          <button type="submit">Submit</button>
+          <CustomButton type="submit">Submit</CustomButton>
         </form>
       </div>
     </div>

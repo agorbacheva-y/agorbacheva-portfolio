@@ -11,6 +11,8 @@ const LinkButton = styled(Button) ({
   backgroundColor: '#00CECB',
   color: '#333745',
   fontFamily: ['League Spartan', 'sans-serif'],
+  textTransform: 'capitalize',
+  fontWeight: 700,
   '&:hover': {
    backgroundColor: '#00a5a2',
    fontWeight: 600,
