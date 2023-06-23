@@ -36,7 +36,7 @@ const Contact = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Form response was not ok');
+          throw new Error('Oops! The form was not sent.');
         }
         setSubmitted(true);
       })
@@ -44,22 +44,8 @@ const Contact = () => {
         e.target.submit();
       });
   
-    clearInput();
-    setInputValue({ fullName: "", email: "", message: "" });
+    e.target.reset();
   };
-
-  const clearInput = () => {
-    setInputValue({ fullName: "", email: "", message: "" })
-  };
-
-  if (submitted) {
-    return (
-      <>
-        <p>Thank you!</p>
-        <p>We'll be in touch soon.</p>
-      </>
-    );
-  }
 
   return (
     <div className="contact">
@@ -106,5 +92,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// cant clear input after submit...
