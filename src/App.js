@@ -17,7 +17,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-      {/* <FormSent /> */}
+      <FormSent />
     </div>
   );
 }

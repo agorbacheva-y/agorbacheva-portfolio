@@ -7,7 +7,7 @@ const Home = () => {
         <div className="home__pic">
          {/* add image here */}
         </div>
-        <div>
+        <div className="home__greeting">
           <h3><span className="bold">Hej!</span> I'm</h3>
         </div>
         <div>
