@@ -201,6 +201,18 @@
   margin: 1rem auto;
 }
 
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: v.$main-color;
+  padding-top: 1rem;
+}
+
+.footer__name {
+  color: #ffffff;
+}
+
 /* FORM SENT */
 .formsent-title {
   font-weight: 700;
