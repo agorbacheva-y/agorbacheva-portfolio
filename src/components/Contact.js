@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Title from "./Title";
 import CustomTextField from "./CustomTextField";
 import CustomButton from "./CustomButton";
@@ -52,8 +53,14 @@ const Contact = () => {
     <div className="contact">
       <Title>Contact</Title>
 
+      <p>Let's connect!</p>
+      <div className="contact__icons__container">
+        <FaGithub className="contact__icon" />
+        <FaLinkedin className="contact__icon "/>
+      </div>
+
       <div>
-        <form className="form" onSubmit={handleSubmit} method="POST" action={FORM_ENDPOINT} >
+        <form className="contact__form" onSubmit={handleSubmit} method="POST" action={FORM_ENDPOINT} >
           <CustomTextField 
             type="text"
             label="Name" 

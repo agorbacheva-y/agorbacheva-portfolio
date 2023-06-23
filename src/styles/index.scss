@@ -186,9 +186,19 @@
   border: 1px solid purple;
 }
 
-.form {
+.contact__icons__container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__icon {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.contact__form {
   max-width: 80%;
-  margin: auto;
+  margin: 1rem auto;
 }
 
 /* FORM SENT */
