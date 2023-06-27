@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,17 +11,6 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#333745',
-    },
-    secondary: {
-      main: '#00CECB',
-    }
-  },
-});
 
 const Appbar = () => {
   const navItems = ['Home', 'About', 'Projects', 'Contact'];
@@ -38,7 +26,20 @@ const Appbar = () => {
         <List>
           {navItems.map((item) => (
             <ListItem key={item}>
-              <ListItemButton >
+              <ListItemButton 
+                sx={{
+                  fontFamily: 'League Spartan', //not applying??
+                  color: '#333745', // not applying??
+                  '&:hover': {
+                    color: '#00CECB',
+                    backgroundColor: 'none',
+                  },
+                  '&:focus': {
+                    fontWeight: 700,
+                    color: '#00CECB',
+                  }
+                }}
+              >
                 <ListItemText primary={item} />
               </ListItemButton>
             </ListItem>
@@ -47,11 +48,10 @@ const Appbar = () => {
       </Box>
   )
   return (
-    <ThemeProvider theme={theme}>
       <Box>
         <CssBaseline />
-        <AppBar component="nav">
-          <Toolbar>
+        <AppBar component="nav" >
+          <Toolbar sx={{ backgroundColor: '#333745'}}>
             <IconButton
               sx={{ display: { xs: 'block', sm: 'none' } }}
               color="inherit"
@@ -75,6 +75,10 @@ const Appbar = () => {
                     '&:hover': {
                       color: '#00CECB',
                     },
+                    '&:focus': {
+                      fontWeight: 700,
+                      color: '#00CECB',
+                    }
                   }}
                 >
                   {item}
@@ -83,25 +87,8 @@ const Appbar = () => {
             </Box>
           </Toolbar>
         </AppBar>
-        <Box component="nav" 
-          sx={[
-            {
-              '&:hover': {
-                color: 'red',
-                backgroundColor: 'white',
-              },
-            },
-          ]}
-        >
+        <Box component="nav">
           <Drawer
-            sx={[
-              {
-                '&:hover': {
-                  color: 'red',
-                  backgroundColor: 'white',
-                },
-              },
-            ]}
             variant="temporary"
             open={appbar}
             onClose={handleAppbar}
@@ -113,7 +100,6 @@ const Appbar = () => {
           </Drawer>
         </Box>
       </Box>
-    </ThemeProvider>
   );
 };
 
