@@ -1,3 +1,4 @@
+import { createTheme } from '@mui/material/styles';
 import Appbar from "./components/Appbar";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -17,7 +18,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-      <FormSent />
+      {/* <FormSent /> */}
     </div>
   );
 }
