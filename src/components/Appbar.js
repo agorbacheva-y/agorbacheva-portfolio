@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { createTheme, ThemeProvider, styled, makeStyles, withStyles } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
-//import ListItem from '@mui/material/ListItem';
+import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -24,45 +24,10 @@ const theme = createTheme({
   },
 });
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    color: 'yellow',
-  }
-}));
-
-const ListItem = withStyles ({
-  root: {
-    "&$selected": {
-      backgroundColor: "red",
-      color: "white",
-      "& .MuiListItemIcon-root": {
-        color: "white"
-      }
-    },
-    "&$selected:hover": {
-      backgroundColor: "purple",
-      color: "white",
-      "& .MuiListItemIcon-root": {
-        color: "white"
-      }
-    },
-    "&:hover": {
-      backgroundColor: "blue",
-      color: "white",
-      "& .MuiListItemIcon-root": {
-        color: "white"
-      }
-    }
-  },
-  selected: {}
-})(MuiListItem);
-
 const Appbar = () => {
   const navItems = ['Home', 'About', 'Projects', 'Contact'];
 
   const [ appbar, setAppbar ] = useState(false);
-
-  const classes = useStyles();
 
   const handleAppbar = () => {
     setAppbar((prevState) => !prevState);
@@ -70,7 +35,7 @@ const Appbar = () => {
 
   const drawer = (
       <Box>
-        <StyledList>
+        <List>
           {navItems.map((item) => (
             <ListItem key={item}>
               <ListItemButton >
@@ -78,7 +43,7 @@ const Appbar = () => {
               </ListItemButton>
             </ListItem>
           ))}
-        </StyledList>
+        </List>
       </Box>
   )
   return (
@@ -96,17 +61,47 @@ const Appbar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Box 
+              sx={{ 
+                display: { xs: 'none', sm: 'block' },
+              }}
+            >    
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff' }}>
+                <Button 
+                  key={item} 
+                  sx={{ 
+                    fontFamily: 'League Spartan , sans-serif',
+                    color: '#fff',
+                    '&:hover': {
+                      color: '#00CECB',
+                    },
+                  }}
+                >
                   {item}
                 </Button>
               ))}
             </Box>
           </Toolbar>
         </AppBar>
-        <Box component="nav">
+        <Box component="nav" 
+          sx={[
+            {
+              '&:hover': {
+                color: 'red',
+                backgroundColor: 'white',
+              },
+            },
+          ]}
+        >
           <Drawer
+            sx={[
+              {
+                '&:hover': {
+                  color: 'red',
+                  backgroundColor: 'white',
+                },
+              },
+            ]}
             variant="temporary"
             open={appbar}
             onClose={handleAppbar}
