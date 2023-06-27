@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { BrowserRouter } from 'react-router-dom';
 import Appbar from "./components/Appbar";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Appbar />
       <Home />
       <AboutMe />
@@ -19,7 +19,7 @@ function App() {
       <Contact />
       <Footer />
       {/* <FormSent /> */}
-    </div>
+    </BrowserRouter>
   );
 }
 

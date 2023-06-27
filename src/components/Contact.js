@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <Title>Contact</Title>
+      <Title id="#contact">Contact</Title>
 
       <div className="contact__body">
         <div className="contact__greeting">

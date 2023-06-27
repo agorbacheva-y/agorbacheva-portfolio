@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -61,12 +62,81 @@ const Appbar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Box 
+            <Box
               sx={{ 
                 display: { xs: 'none', sm: 'block' },
               }}
-            >    
-              {navItems.map((item) => (
+            >
+              <Button 
+                className="appbar"
+                sx={{ 
+                  fontFamily: 'League Spartan , sans-serif',
+                  color: '#fff',
+                  '&:hover': {
+                    color: '#00CECB',
+                  },
+                  '&:focus': {
+                    fontWeight: 700,
+                    color: '#00CECB',
+                  }
+                }}
+              >
+                Home
+              </Button>
+
+              <Button 
+                className="appbar"
+                sx={{ 
+                  fontFamily: 'League Spartan , sans-serif',
+                  color: '#fff',
+                  '&:hover': {
+                    color: '#00CECB',
+                  },
+                  '&:focus': {
+                    fontWeight: 700,
+                    color: '#00CECB',
+                  }
+                }}
+              >
+                About
+              </Button>
+
+              <Button 
+                className="appbar"
+                sx={{ 
+                  fontFamily: 'League Spartan , sans-serif',
+                  color: '#fff',
+                  '&:hover': {
+                    color: '#00CECB',
+                  },
+                  '&:focus': {
+                    fontWeight: 700,
+                    color: '#00CECB',
+                  }
+                }}
+              >
+                Projects
+              </Button>
+
+              <Button 
+                className="appbar"
+                sx={{ 
+                  fontFamily: 'League Spartan , sans-serif',
+                  color: '#fff',
+                  '&:hover': {
+                    color: '#00CECB',
+                  },
+                  '&:focus': {
+                    fontWeight: 700,
+                    color: '#00CECB',
+                  }
+                }}
+              >
+                <Link smooth to="#contact"></Link>
+                Contact
+              </Button>
+
+              {/* {navItems.map((item) => (
                 <Button 
                   key={item} 
                   sx={{ 
@@ -83,7 +153,7 @@ const Appbar = () => {
                 >
                   {item}
                 </Button>
-              ))}
+              ))} */}
             </Box>
           </Toolbar>
         </AppBar>
