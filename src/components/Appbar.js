@@ -26,22 +26,21 @@ const Appbar = () => {
       <Box>
         <List>
           {navItems.map((item) => (
-            <ListItem key={item}>
-              <ListItemButton 
+            <ListItem key={item} >
+              <ListItemButton
                 sx={{
                   fontFamily: 'League Spartan', //not applying??
                   color: '#333745', // not applying??
                   '&:hover': {
                     color: '#00CECB',
-                    backgroundColor: 'none',
                   },
                   '&:focus': {
-                    fontWeight: 700,
+                    fontWeight: 700, // not applying??
                     color: '#00CECB',
                   }
                 }}
               >
-                <ListItemText primary={item} />
+                <ListItemText primary={item} sx={{ fontFamily: 'League Spartan' }} />
               </ListItemButton>
             </ListItem>
           ))}
@@ -54,7 +53,9 @@ const Appbar = () => {
         <AppBar component="nav" >
           <Toolbar sx={{ backgroundColor: '#333745'}}>
             <IconButton
-              sx={{ display: { xs: 'block', sm: 'none' } }}
+              sx={{ 
+                display: { xs: 'block', sm: 'none' },
+              }}
               color="inherit"
               aria-label="open drawer"
               edge="start"
@@ -67,81 +68,14 @@ const Appbar = () => {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              <Button 
-                className="appbar"
-                sx={{ 
-                  fontFamily: 'League Spartan , sans-serif',
-                  color: '#fff',
-                  '&:hover': {
-                    color: '#00CECB',
-                  },
-                  '&:focus': {
-                    fontWeight: 700,
-                    color: '#00CECB',
-                  }
-                }}
-              >
-                Home
-              </Button>
-
-              <Button 
-                className="appbar"
-                sx={{ 
-                  fontFamily: 'League Spartan , sans-serif',
-                  color: '#fff',
-                  '&:hover': {
-                    color: '#00CECB',
-                  },
-                  '&:focus': {
-                    fontWeight: 700,
-                    color: '#00CECB',
-                  }
-                }}
-              >
-                About
-              </Button>
-
-              <Button 
-                className="appbar"
-                sx={{ 
-                  fontFamily: 'League Spartan , sans-serif',
-                  color: '#fff',
-                  '&:hover': {
-                    color: '#00CECB',
-                  },
-                  '&:focus': {
-                    fontWeight: 700,
-                    color: '#00CECB',
-                  }
-                }}
-              >
-                Projects
-              </Button>
-
-              <Button 
-                className="appbar"
-                sx={{ 
-                  fontFamily: 'League Spartan , sans-serif',
-                  color: '#fff',
-                  '&:hover': {
-                    color: '#00CECB',
-                  },
-                  '&:focus': {
-                    fontWeight: 700,
-                    color: '#00CECB',
-                  }
-                }}
-              >
-                <Link smooth to="#contact"></Link>
-                Contact
-              </Button>
-
-              {/* {navItems.map((item) => (
+              {navItems.map((item) => (
                 <Button 
                   key={item} 
-                  sx={{ 
+                  sx={{
                     fontFamily: 'League Spartan , sans-serif',
                     color: '#fff',
+                    fontSize: { xs: '1rem', sm: '1.25rem' },
+                    padding: '1rem',
                     '&:hover': {
                       color: '#00CECB',
                     },
@@ -153,7 +87,7 @@ const Appbar = () => {
                 >
                   {item}
                 </Button>
-              ))} */}
+              ))}
             </Box>
           </Toolbar>
         </AppBar>
