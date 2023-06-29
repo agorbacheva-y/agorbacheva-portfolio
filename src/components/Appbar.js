@@ -32,9 +32,10 @@ const Appbar = () => {
       <Box>
         <List>
           {navItems.map((navItem, index) => (
-            <Link key={navItem.section} to={navItem.linkto}>
+            <Link key={index} to={navItem.linkto}>
             <ListItem >
               <ListItemButton
+                onClick={handleAppbar}
                 sx={{
                   fontFamily: 'League Spartan', //not applying??
                   color: '#333745', // not applying??
