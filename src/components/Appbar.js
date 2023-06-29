@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -14,7 +15,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 
 const Appbar = () => {
-  const navItems = ['Home', 'About', 'Projects', 'Contact'];
+  const navItems = [ 
+    {section: 'Home', linkto: "/"},
+    {section: 'About', linkto: "/aboutme"},
+    {section: 'Projects', linkto: "/projects"},
+    {section: 'Contact', linkto: "/contact"},
+  ];
 
   const [ appbar, setAppbar ] = useState(false);
 
@@ -25,8 +31,9 @@ const Appbar = () => {
   const drawer = (
       <Box>
         <List>
-          {navItems.map((item) => (
-            <ListItem key={item} >
+          {navItems.map((navItem, index) => (
+            <Link key={navItem.section} to={navItem.linkto}>
+            <ListItem >
               <ListItemButton
                 sx={{
                   fontFamily: 'League Spartan', //not applying??
@@ -40,10 +47,15 @@ const Appbar = () => {
                   }
                 }}
               >
-                <ListItemText primary={item} sx={{ fontFamily: 'League Spartan' }} />
+                
+                <ListItemText primary={navItem.section} sx={{ fontFamily: 'League Spartan' }} />
+               
               </ListItemButton>
+              
             </ListItem>
+            </Link>
           ))}
+          
         </List>
       </Box>
   )
@@ -68,25 +80,27 @@ const Appbar = () => {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              {navItems.map((item) => (
-                <Button 
-                  key={item} 
-                  sx={{
-                    fontFamily: 'League Spartan , sans-serif',
-                    color: '#fff',
-                    fontSize: { xs: '1rem', sm: '1.25rem' },
-                    padding: '1rem',
-                    '&:hover': {
-                      color: '#00CECB',
-                    },
-                    '&:focus': {
-                      fontWeight: 700,
-                      color: '#00CECB',
-                    }
-                  }}
-                >
-                  {item}
-                </Button>
+              {navItems.map((navItem, index) => (
+                <HashLink smooth to={navItem.linkto}>
+                  <Button 
+                    key={index} 
+                    sx={{
+                      fontFamily: 'League Spartan , sans-serif',
+                      color: '#fff',
+                      fontSize: { xs: '1rem', sm: '1.25rem' },
+                      padding: '1rem',
+                      '&:hover': {
+                        color: '#00CECB',
+                      },
+                      '&:focus': {
+                        fontWeight: 700,
+                        color: '#00CECB',
+                      }
+                    }}
+                  >
+                    {navItem.section}
+                  </Button>
+                </HashLink>
               ))}
             </Box>
           </Toolbar>
