@@ -55,6 +55,42 @@
   font-family: 'League Spartan', sans-serif;
 }
 
+/* NAVBAR */
+nav {
+  height: 5rem;
+  position: relative;
+  background-color: v.$main-txt-color;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar__container {
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    text-align: center;
+    display: inline-flex;
+    padding: 0 1rem;
+  }
+
+  .navbar__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+    :focus {
+      font-weight: 700;
+      color: v.$main-color;
+    }
+
+    :hover {
+      color: v.$main-color;
+    }
+}
+
 /* TITLE */
 .title {
   font-weight: 700;

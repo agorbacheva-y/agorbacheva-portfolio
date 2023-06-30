@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Appbar from "./components/Appbar";
+import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
@@ -11,7 +12,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <Appbar />
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route exact path='/aboutme' element={<AboutMe />} />
