@@ -64,6 +64,16 @@ nav {
   align-items: center;
 }
 
+.navbar__container {
+  display: inline-flex;
+}
+.navbar__container .navbar__menu {
+  color: #ffffff;
+  margin-right: 2rem;
+}
+.navbar__container .navbar__links {
+  display: none;
+}
 .navbar__container ul {
   list-style-type: none;
 }
