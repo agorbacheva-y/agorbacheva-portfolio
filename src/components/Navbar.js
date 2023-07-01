@@ -40,16 +40,16 @@ const Navbar = () => {
                 <div className="navbar__elements">
                   <ul>
                     <li>
-                      <NavLink className="navbar__link" to="/">Home</NavLink>
+                      <NavLink className="navbar__link" to="/" onClick={handleClose}>Home</NavLink>
                     </li>
                     <li>
-                      <NavLink className="navbar__link" to="/aboutme">About</NavLink>
+                      <NavLink className="navbar__link" to="/aboutme" onClick={handleClose}>About</NavLink>
                     </li>
                     <li>
-                      <NavLink className="navbar__link" to="/projects">Projects</NavLink>
+                      <NavLink className="navbar__link" to="/projects" onClick={handleClose}>Projects</NavLink>
                     </li>
                     <li>
-                      <NavLink className="navbar__link" to="/contact">Contact</NavLink>
+                      <NavLink className="navbar__link" to="/contact" onClick={handleClose}>Contact</NavLink>
                     </li>
                   </ul>
                 </div>
