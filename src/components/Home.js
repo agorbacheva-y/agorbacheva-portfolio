@@ -2,7 +2,7 @@ import Layout from "./Layout";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home" id="home">
       <Layout>
         <div className="home__pic">
          {/* add image here */}

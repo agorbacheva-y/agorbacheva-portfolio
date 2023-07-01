@@ -118,6 +118,7 @@
 .navbar__elements li {
   text-align: center;
   padding: 0 1rem;
+  cursor: pointer;
 }
 .navbar__elements .navbar__link {
   text-decoration: none;
