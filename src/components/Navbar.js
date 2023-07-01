@@ -26,32 +26,38 @@ const Navbar = () => {
         </button>
       </div>
 
-        <div className="navbar__elements">
+        
           { showNavbar && (
-            <>
-              <ul>
-                <li>
-                  <NavLink className="navbar__link" to="/">Home</NavLink>
-                </li>
-                <li>
-                  <NavLink className="navbar__link" to="/aboutme">About</NavLink>
-                </li>
-                <li>
-                  <NavLink className="navbar__link" to="/projects">Projects</NavLink>
-                </li>
-                <li>
-                  <NavLink className="navbar__link" to="/contact">Contact</NavLink>
-                </li>
-              </ul>
-          
-              <div className='navbar__close'>
-                <button className={`navbar__icon ${showNavbar ? "active" : "hidden"}`} >
-                  <CloseIcon onClick={handleClose} />
-                </button>
+            <div className='navbar__overlay'>
+              <div className='navbar__content'>
+
+                <div className='navbar__close'>
+                  <button className={`navbar__icon ${showNavbar ? "active" : "hidden"}`} >
+                    <CloseIcon onClick={handleClose} />
+                  </button>
+                </div>
+
+                <div className="navbar__elements">
+                  <ul>
+                    <li>
+                      <NavLink className="navbar__link" to="/">Home</NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="navbar__link" to="/aboutme">About</NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="navbar__link" to="/projects">Projects</NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="navbar__link" to="/contact">Contact</NavLink>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
-            </>
+            </div>
           )}
-        </div>
+        
         
     </nav>
   );

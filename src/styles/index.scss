@@ -60,9 +60,7 @@
   height: 5rem;
   position: relative;
   background-color: v.$main-txt-color;
-  overflow: hidden;
-
-  
+  overflow: hidden; 
 }
 
 .navbar__menu {
@@ -78,29 +76,50 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+  border: 1px solid yellow;
+  width: 3rem;
+  height: 3rem;
 }
 
 .navbar__icon.hidden {
   display: none;
 }
 
-.navbar__elements {
-  display: inline-flex;
+.navbar__overlay {
+  position: fixed;
+  display: block;
+  overflow: hidden;
+  width: 10rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: v.$main-txt-color;
+  z-index: 999;
+}
+
+.navbar__content {
+  display: flex;
+  flex-direction: column;
   border: 1px solid green;
+}
 
-  .navbar__close {
-    right: 0;
-    border: 1px solid red;
-  }
+.navbar__close {
+  border: 1px solid red;
+  width: 3rem;
+  margin-left: auto;
+}
 
+.navbar__elements {
+  font-size: 1.2rem;
+  line-height: 5rem;
+ 
   ul {
     list-style-type: none;
-    display: flex;
   }
 
   li {
     text-align: center;
-    display: inline-flex;
     padding: 0 1rem;
   }
 
