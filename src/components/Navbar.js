@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Navbar = () => {
+const Navbar = ({ contactRef }) => {
   const [ showNavbar, setShowNavbar ] = useState(false);
 
   const handleShow = () => {
@@ -12,6 +12,11 @@ const Navbar = () => {
 
   const handleClose = () => {
     setShowNavbar(false);
+  }
+
+  
+  const scrollToSection = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
@@ -40,7 +45,7 @@ const Navbar = () => {
                 <div className="navbar__elements">
                   <ul>
                     <li>
-                      <NavLink className="navbar__link" to="/" onClick={handleClose}>Home</NavLink>
+                      <a className="navbar__link" to="/" onClick={scrollToSection}>Home</a>
                     </li>
                     <li>
                       <NavLink className="navbar__link" to="/aboutme" onClick={handleClose}>About</NavLink>
@@ -49,7 +54,7 @@ const Navbar = () => {
                       <NavLink className="navbar__link" to="/projects" onClick={handleClose}>Projects</NavLink>
                     </li>
                     <li>
-                      <NavLink className="navbar__link" to="/contact" onClick={handleClose}>Contact</NavLink>
+                      <a className="navbar__link" to="/contact" onClick={scrollToSection}>Contact</a>
                     </li>
                   </ul>
                 </div>

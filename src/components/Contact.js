@@ -6,7 +6,7 @@ import CustomButton from "./CustomButton";
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/c27aab20-10dd-11ee-a6b0-17653bd30bd3";
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
   // store input
   const [ inputValue, setInputValue ] = useState({
     fullName: "",
@@ -50,8 +50,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <Title id="#contact">Contact</Title>
+    <div className="contact" id="#contact" ref={contactRef}>
+      <Title>Contact</Title>
 
       <div className="contact__body">
         <div className="contact__greeting">
