@@ -61,47 +61,55 @@
   overflow: hidden;
 }
 
-.navbar__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
+.navbar__menu {
+  position: relative;
   height: 100%;
-  border: 1px solid red;
+  top: 25%;
+  margin-left: auto;
+  padding-right: 2rem;
 }
 
-.navbar__menu {
-  color: red;
+.navbar__icon.active {
+  color: white;
   cursor: pointer;
   border: none;
   background-color: transparent;
 }
 
-.navbar__elements :active {
-  display: block;
+.navbar__icon.hidden {
+  display: none;
 }
-.navbar__elements :active ul {
+
+.navbar__elements {
+  display: inline-flex;
+  border: 1px solid green;
+}
+.navbar__elements .navbar__close {
+  right: 0;
+  border: 1px solid red;
+}
+.navbar__elements ul {
   list-style-type: none;
   display: flex;
 }
-.navbar__elements :active li {
+.navbar__elements li {
   text-align: center;
   display: inline-flex;
   padding: 0 1rem;
 }
-.navbar__elements :active .navbar__link {
+.navbar__elements .navbar__link {
   text-decoration: none;
   color: #ffffff;
   transition: 0.2s ease-in-out;
 }
-.navbar__elements :active :focus {
+.navbar__elements :focus {
   color: #00CECB;
   left: 30%;
   right: 30%;
   bottom: -10px;
   border-bottom: 1px solid #00CECB;
 }
-.navbar__elements :active :hover {
+.navbar__elements :hover {
   color: #00CECB;
 }
 

@@ -17,14 +17,14 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
 
+      <div className='navbar__menu'>
         <button 
-          className="navbar__menu" 
+          className={`navbar__icon ${showNavbar ? "hidden" : "active"}`} 
           onClick={handleShow}
         >
           <MenuIcon  />
         </button>
-        
-      
+      </div>
 
         <div className="navbar__elements">
           { showNavbar && (
@@ -44,9 +44,11 @@ const Navbar = () => {
                 </li>
               </ul>
           
-              <button className="navbar__close">
-                <CloseIcon onClick={handleClose} />
-              </button>
+              <div className='navbar__close'>
+                <button className={`navbar__icon ${showNavbar ? "active" : "hidden"}`} >
+                  <CloseIcon onClick={handleClose} />
+                </button>
+              </div>
             </>
           )}
         </div>
