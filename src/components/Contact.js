@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Title from "./Title";
 import CustomTextField from "./CustomTextField";
@@ -6,7 +6,7 @@ import CustomButton from "./CustomButton";
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/c27aab20-10dd-11ee-a6b0-17653bd30bd3";
 
-const Contact = ({ contactRef }) => {
+const Contact = ( props, ref ) => {
   // store input
   const [ inputValue, setInputValue ] = useState({
     fullName: "",
@@ -50,7 +50,7 @@ const Contact = ({ contactRef }) => {
   };
 
   return (
-    <div className="contact" id="#contact" ref={contactRef}>
+    <div className="contact" id="#contact" ref={ref}>
       <Title>Contact</Title>
 
       <div className="contact__body">
@@ -102,4 +102,4 @@ const Contact = ({ contactRef }) => {
   );
 };
 
-export default Contact;
+export default forwardRef(Contact);

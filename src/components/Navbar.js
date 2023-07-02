@@ -3,8 +3,10 @@ import { useState, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Navbar = ({ contactRef }) => {
+const Navbar = ({ scrollTo }) => {
   const [ showNavbar, setShowNavbar ] = useState(false);
+
+
 
   const handleShow = () => {
     setShowNavbar(true);
@@ -15,9 +17,6 @@ const Navbar = ({ contactRef }) => {
   }
 
   
-  const scrollToSection = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
 
   return (
     <nav className='navbar'>
@@ -45,16 +44,16 @@ const Navbar = ({ contactRef }) => {
                 <div className="navbar__elements">
                   <ul>
                     <li>
-                      <a className="navbar__link" to="/" onClick={scrollToSection}>Home</a>
+                      <a className="navbar__link" to="/" onClick={() => scrollTo()}>Home</a>
                     </li>
                     <li>
-                      <NavLink className="navbar__link" to="/aboutme" onClick={handleClose}>About</NavLink>
+                      <a className="navbar__link" to="/aboutme" onClick={handleClose}>About</a>
                     </li>
                     <li>
-                      <NavLink className="navbar__link" to="/projects" onClick={handleClose}>Projects</NavLink>
+                      <a className="navbar__link" to="/projects" onClick={handleClose}>Projects</a>
                     </li>
                     <li>
-                      <a className="navbar__link" to="/contact" onClick={scrollToSection}>Contact</a>
+                      <a className="navbar__link" to="/contact" onClick={() => scrollTo()}>Contact</a>
                     </li>
                   </ul>
                 </div>
