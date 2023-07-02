@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import Appbar from "./components/Appbar";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -12,34 +12,60 @@ import Footer from "./components/Footer";
 import { AddBoxOutlined } from "@mui/icons-material";
 
 function App() {
+  const [ showNavbar, setShowNavbar ] = useState(false);
+
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
+  const handleShow = () => {
+    setShowNavbar(true);
+  };
+
+  const handleClose = () => {
+    setShowNavbar(false);
+  };
+
   const scrollToHome = () => {
     if(!homeRef.current) return;
     homeRef.current?.scrollIntoView({ behavior: "smooth" });
+
+    handleClose();
   };
 
   const scrollToAbout = () => {
     if(!aboutRef.current) return;
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+
+    handleClose();
   };
 
   const scrollToProjects = () => {
     if(!projectsRef.current) return;
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+
+    handleClose();
   };
 
   const scrollToContact = () => {
     if(!contactRef.current) return;
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
+
+    handleClose();
   };
 
   return (
     <>
-      <Navbar scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout} scrollToHome={scrollToHome} />
+      <Navbar 
+        showNavbar={showNavbar}
+        handleShow={handleShow}
+        handleClose={handleClose}
+        scrollToContact={scrollToContact} 
+        scrollToProjects={scrollToProjects} 
+        scrollToAbout={scrollToAbout} 
+        scrollToHome={scrollToHome}
+      />
       <Home ref={homeRef} />
       <AboutMe ref={aboutRef} />
       <Skills />

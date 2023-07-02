@@ -3,20 +3,7 @@ import { useState, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Navbar = ({ scrollToContact, scrollToProjects, scrollToAbout, scrollToHome }) => {
-  const [ showNavbar, setShowNavbar ] = useState(false);
-
-
-
-  const handleShow = () => {
-    setShowNavbar(true);
-  };
-
-  const handleClose = () => {
-    setShowNavbar(false);
-  }
-
-  
+const Navbar = ({ showNavbar, handleShow, handleClose, scrollToContact, scrollToProjects, scrollToAbout, scrollToHome }) => {
 
   return (
     <nav className='navbar'>
@@ -29,7 +16,6 @@ const Navbar = ({ scrollToContact, scrollToProjects, scrollToAbout, scrollToHome
           <MenuIcon  />
         </button>
       </div>
-
         
           { showNavbar && (
             <div className='navbar__overlay'>
