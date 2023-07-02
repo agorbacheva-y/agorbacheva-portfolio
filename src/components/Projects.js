@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 import Title from "./Title";
 import login from "../images/login.png"
 import Stack from "@mui/material/Stack";
 import CustomButton from "./CustomButton";
 
-const Projects = () => {
+const Projects = ( props, ref ) => {
   return (
-    <div className="projects">
+    <div className="projects" ref={ref}>
       <Title>Recent Work</Title>
       
       <div className="project__container">
@@ -44,4 +45,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default forwardRef(Projects);

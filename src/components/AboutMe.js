@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import Title from "./Title";
 
-const AboutMe = () => {
+const AboutMe = ( props, ref ) => {
   return (
-    <div className="aboutme" id="aboutme">
+    <div className="aboutme" ref={ref}>
       <Title>About Me</Title>
       <div className="aboutme__text">
         <p>Lorem ipsum dolor sit amet. Et nihil minima sed dolorem ipsam et deleniti repudiandae et itaque labore 33 atque laborum est quis voluptatem. Est porro aspernatur vel molestias natus vel fugiat nobis ut aliquam dignissimos At enim recusandae!
@@ -13,4 +14,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default forwardRef(AboutMe);

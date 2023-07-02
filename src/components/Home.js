@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import Layout from "./Layout";
 
-const Home = () => {
+const Home = ( props, ref ) => {
   return (
-    <div className="home" id="home">
+    <div className="home" ref={ref} >
       <Layout>
         <div className="home__pic">
          {/* add image here */}
@@ -22,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default forwardRef(Home);

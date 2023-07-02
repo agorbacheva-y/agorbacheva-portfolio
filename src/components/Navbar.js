@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Navbar = ({ scrollTo }) => {
+const Navbar = ({ scrollToContact, scrollToProjects, scrollToAbout, scrollToHome }) => {
   const [ showNavbar, setShowNavbar ] = useState(false);
 
 
@@ -44,16 +44,16 @@ const Navbar = ({ scrollTo }) => {
                 <div className="navbar__elements">
                   <ul>
                     <li>
-                      <a className="navbar__link" to="/" onClick={() => scrollTo()}>Home</a>
+                      <a className="navbar__link" to="/" onClick={scrollToHome}>Home</a>
                     </li>
                     <li>
-                      <a className="navbar__link" to="/aboutme" onClick={handleClose}>About</a>
+                      <a className="navbar__link" to="/aboutme" onClick={scrollToAbout}>About</a>
                     </li>
                     <li>
-                      <a className="navbar__link" to="/projects" onClick={handleClose}>Projects</a>
+                      <a className="navbar__link" to="/projects" onClick={scrollToProjects}>Projects</a>
                     </li>
                     <li>
-                      <a className="navbar__link" to="/contact" onClick={() => scrollTo()}>Contact</a>
+                      <a className="navbar__link" to="/contact" onClick={scrollToContact}>Contact</a>
                     </li>
                   </ul>
                 </div>

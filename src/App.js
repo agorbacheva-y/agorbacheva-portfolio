@@ -12,21 +12,39 @@ import Footer from "./components/Footer";
 import { AddBoxOutlined } from "@mui/icons-material";
 
 function App() {
-  const ref = useRef(null);
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const scrollTo = (e) => {
-    if(!ref.current) return;
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  }
+  const scrollToHome = () => {
+    if(!homeRef.current) return;
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToAbout = () => {
+    if(!aboutRef.current) return;
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToProjects = () => {
+    if(!projectsRef.current) return;
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    if(!contactRef.current) return;
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
-      <Navbar scrollTo={scrollTo} />
-      <Home />
-      <AboutMe />
+      <Navbar scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout} scrollToHome={scrollToHome} />
+      <Home ref={homeRef} />
+      <AboutMe ref={aboutRef} />
       <Skills />
-      <Projects />
-      <Contact ref={ref} />
+      <Projects ref={projectsRef} />
+      <Contact ref={contactRef} />
       <Footer />
       {/* <FormSent /> */}
     </>  
