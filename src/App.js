@@ -1,6 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useRef } from "react";
-import Appbar from "./components/Appbar";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -9,7 +7,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import FormSent from "./components/FormSent";
 import Footer from "./components/Footer";
-import { AddBoxOutlined } from "@mui/icons-material";
 
 function App() {
   const [ showNavbar, setShowNavbar ] = useState(false);

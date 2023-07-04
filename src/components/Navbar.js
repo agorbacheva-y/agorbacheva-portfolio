@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import NavLinks from './NavLinks';
 
 const Navbar = ({ showNavbar, handleShow, handleClose, scrollToContact, scrollToProjects, scrollToAbout, scrollToHome }) => {
 
@@ -17,38 +17,34 @@ const Navbar = ({ showNavbar, handleShow, handleClose, scrollToContact, scrollTo
         </button>
       </div>
         
-          { showNavbar && (
-            <div className='navbar__overlay'>
-              <div className='navbar__content'>
+      { showNavbar && (
+        <div className='navbar__overlay'>
+          <div className='navbar__content'>
 
-                <div className='navbar__close'>
-                  <button className={`navbar__icon ${showNavbar ? "active" : "hidden"}`} >
-                    <CloseIcon onClick={handleClose} />
-                  </button>
-                </div>
-
-                <div className="navbar__elements">
-                  <ul>
-                    <li>
-                      <a className="navbar__link" to="/" onClick={scrollToHome}>Home</a>
-                    </li>
-                    <li>
-                      <a className="navbar__link" to="/aboutme" onClick={scrollToAbout}>About</a>
-                    </li>
-                    <li>
-                      <a className="navbar__link" to="/projects" onClick={scrollToProjects}>Projects</a>
-                    </li>
-                    <li>
-                      <a className="navbar__link" to="/contact" onClick={scrollToContact}>Contact</a>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
+            <div className='navbar__close'>
+              <button className={`navbar__icon ${showNavbar ? "active" : "hidden"}`} >
+                <CloseIcon onClick={handleClose} />
+              </button>
             </div>
-          )}
+
+            <NavLinks 
+              scrollToAbout={scrollToAbout} 
+              scrollToContact={scrollToContact} 
+              scrollToHome={scrollToHome} 
+              scrollToProjects={scrollToProjects} 
+            />
+          </div>
+        </div>
+      )}
         
-        
+      <div className='navbar__tablet'>
+        <NavLinks 
+          scrollToAbout={scrollToAbout} 
+          scrollToContact={scrollToContact} 
+          scrollToHome={scrollToHome} 
+          scrollToProjects={scrollToProjects} 
+        />
+      </div>
     </nav>
   );
 };
