@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Title from "./Title";
 import CustomTextField from "./CustomTextField";
 import CustomButton from "./CustomButton";
-import { Refresh } from "@mui/icons-material";
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/c27aab20-10dd-11ee-a6b0-17653bd30bd3";
 

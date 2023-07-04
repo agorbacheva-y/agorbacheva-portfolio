@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Top from "./components/Top";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -7,10 +8,12 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import FormSent from "./components/FormSent";
 import Footer from "./components/Footer";
+import userEvent from "@testing-library/user-event";
 
 function App() {
   const [ showNavbar, setShowNavbar ] = useState(false);
 
+  const topRef = useRef(null);
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -22,6 +25,11 @@ function App() {
 
   const handleClose = () => {
     setShowNavbar(false);
+  };
+
+  const scrollToTop = () => {
+    if(!topRef.current) return;
+    topRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToHome = () => {
@@ -54,6 +62,7 @@ function App() {
 
   return (
     <>
+      <Top ref={topRef} />
       <Navbar 
         showNavbar={showNavbar}
         handleShow={handleShow}
@@ -62,6 +71,7 @@ function App() {
         scrollToProjects={scrollToProjects} 
         scrollToAbout={scrollToAbout} 
         scrollToHome={scrollToHome}
+        scrollToTop={scrollToTop}
       />
       <Home ref={homeRef} />
       <AboutMe ref={aboutRef} />
