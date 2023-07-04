@@ -144,6 +144,21 @@
   display: none;
 }
 
+.arrow-up {
+  border: none;
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: v.$main-txt-color;
+  }
+}
+
 /* TITLE */
 .title {
   font-weight: 700;

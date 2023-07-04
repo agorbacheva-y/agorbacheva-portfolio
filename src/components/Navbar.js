@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import NavLinks from './NavLinks';
 
 const Navbar = ({ showNavbar, handleShow, handleClose, scrollToContact, scrollToProjects, scrollToAbout, scrollToHome }) => {
@@ -45,6 +46,12 @@ const Navbar = ({ showNavbar, handleShow, handleClose, scrollToContact, scrollTo
           scrollToProjects={scrollToProjects} 
         />
       </div>
+
+      <button className='arrow-up'>
+        <a className="navbar__link" to="/" onClick={scrollToHome}>
+          <KeyboardDoubleArrowUpIcon style={{fontSize: '2rem'}} />
+        </a>
+      </button>
     </nav>
   );
 };
