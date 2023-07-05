@@ -10,6 +10,7 @@ const Projects = ( props, ref ) => {
     <div className="projects" ref={ref}>
       <Title>Recent Work</Title>
       
+      <div className="projects__container">
       {/* SmartKids Learning Game */}
       <div className="project__container">
         <img src={login} alt="main menu" className="project__img" />
@@ -74,6 +75,8 @@ const Projects = ( props, ref ) => {
             </Stack>
           </div>
         </div>  
+      </div>
+
       </div>
     </div>
   );
