@@ -94,7 +94,7 @@
   right: 0;
   bottom: 0;
   background-color: v.$main-txt-color;
-  z-index: 999;
+  z-index: 900;
 }
 
 .navbar__content {
@@ -146,12 +146,16 @@
 
 .arrow-up {
   border: none;
-  background: transparent;
+  background: #ffff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
   position: fixed;
-  bottom: 0;
+  bottom: 4%;
   right: 0;
-  margin: 2rem;
+  margin: 1.5rem;
   cursor: pointer;
+  z-index: 999;
 
   a {
     text-decoration: none;
@@ -404,6 +408,12 @@
     }
   }
 
+  .arrow-up {
+    width: 5rem;
+    height: 5rem;
+    margin: 1.5rem;
+  }
+
   /* TITLE for tablet */
   .title {
     font-size: 2.2rem;
@@ -503,6 +513,13 @@
 
 /* MEDIA QUERY FOR 900px */
 @media screen and (min-width: 900px) {
+  /* NAVBAR */
+  .arrow-up {
+    width: 5rem;
+    height: 5rem;
+    margin: 2rem;
+  }
+
   /* CONTACT */
   .contact__body {
     max-width: 80vw;
