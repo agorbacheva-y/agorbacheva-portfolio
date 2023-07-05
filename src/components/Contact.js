@@ -62,7 +62,12 @@ const Contact = ( props, ref ) => {
           </div>
         </div>
 
-        <form className="contact__form" onSubmit={handleSubmit} method="POST" action={FORM_ENDPOINT} >
+        <form 
+          className="contact__form" 
+          onSubmit={handleSubmit} 
+          method="POST" 
+          action={FORM_ENDPOINT} 
+        >
           <CustomTextField 
             type="text"
             label="Name" 

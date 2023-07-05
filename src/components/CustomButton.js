@@ -24,7 +24,10 @@ const LinkButton = styled(Button) ({
 const CustomButton = ({ children }) => {
   return (
     <div>
-      <LinkButton variant="contained" >
+      <LinkButton 
+        variant="contained"
+        type="button"
+      >
         {children}
       </LinkButton>
     </div>

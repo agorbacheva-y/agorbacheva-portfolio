@@ -47,7 +47,10 @@ const Navbar = ({ showNavbar, handleShow, handleClose, scrollToContact, scrollTo
       </div>
 
       <button className='arrow-up'>
-        <a className="navbar__link" onClick={scrollToTop}>
+        <a 
+          className="navbar__link" 
+          onClick={scrollToTop}
+        >
           <KeyboardDoubleArrowUpIcon style={{fontSize: '2rem'}} />
         </a>
       </button>
