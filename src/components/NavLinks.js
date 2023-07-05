@@ -3,24 +3,24 @@ const NavLinks = ({ scrollToAbout, scrollToContact, scrollToHome, scrollToProjec
     <div className="navbar__elements">
       <ul>
         <li>
-          <a className="navbar__link" onClick={scrollToHome}>
+          <button className="navbar__link" onClick={scrollToHome}>
             Home
-          </a>
+          </button>
         </li>
         <li>
-          <a className="navbar__link" onClick={scrollToAbout}>
+          <button className="navbar__link" onClick={scrollToAbout}>
             About
-          </a>
+          </button>
         </li>
         <li>
-          <a className="navbar__link" onClick={scrollToProjects}>
+          <button className="navbar__link" onClick={scrollToProjects}>
             Projects
-          </a>
+          </button>
         </li>
         <li>
-          <a className="navbar__link" onClick={scrollToContact}>
+          <button className="navbar__link" onClick={scrollToContact}>
             Contact
-          </a>
+          </button>
         </li>
       </ul>
     </div>
