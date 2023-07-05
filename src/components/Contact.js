@@ -57,8 +57,21 @@ const Contact = ( props, ref ) => {
         <div className="contact__greeting">
           <p>Let's connect!</p>
           <div className="contact__icons__container">
-            <FaGithub className="contact__icon" />
-            <FaLinkedin className="contact__icon "/>
+            <a 
+              href="https://github.com/agorbacheva-y" 
+              target="blank"
+              className="contact__link"
+            >
+              <FaGithub className="contact__icon" />
+            </a>
+            <a
+              href="https://linkedin.com/in/ayumi-gorbacheva-yamamoto-04930038"
+              target="blank"
+              className="contact__link"
+            >
+              <FaLinkedin className="contact__icon "/>
+            </a>
+            
           </div>
         </div>
 

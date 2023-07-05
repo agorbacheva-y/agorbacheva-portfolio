@@ -300,7 +300,17 @@
 
 .contact__icon {
   font-size: 1.5rem;
-  margin: 0 1rem;
+  color: v.$main-txt-color;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__link {
+  text-decoration: none;
+
+  :hover {
+    transform: scale(1.3);
+    color: v.$main-color;
+  }
 }
 
 .contact__form {
