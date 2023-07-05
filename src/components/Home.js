@@ -16,7 +16,9 @@ const Home = ( props, ref ) => {
           <h2 className="last-name">Gorbacheva-Yamamoto</h2>
         </div>
         <div className="home__desc">
-          <h4>an aspiring web developer with a passion to learn</h4>
+          <h4>an aspiring web developer with a passion to learn about creating
+            interactive and engaging experiences on the web
+          </h4>
         </div>
       </Layout>
     </div>

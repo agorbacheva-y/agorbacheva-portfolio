@@ -5,6 +5,7 @@
   font-family: "League Spartan", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
 }
 
 /* LAYOUT */
@@ -185,6 +186,7 @@
 .aboutme__text {
   max-width: 80%;
   margin: auto;
+  text-align: left;
 }
 
 /* SKILLS */
@@ -351,6 +353,12 @@
   .home {
     margin-top: 50px;
   }
+  .home__desc {
+    max-width: 75%;
+  }
+  .aboutme__text {
+    max-width: 75%;
+  }
 }
 /* TABLET SCREEN */
 @media screen and (min-width: 600px) {
@@ -371,6 +379,9 @@
   .last-name {
     font-size: 3.5rem;
     font-weight: 400;
+  }
+  .home__desc {
+    max-width: 80%;
   }
   .home__desc h4 {
     font-size: 1.8rem;
@@ -393,7 +404,7 @@
   }
   .navbar__elements li {
     display: inline;
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
   .arrow-up {
     width: 5rem;
@@ -417,6 +428,7 @@
   }
   .aboutme__text {
     font-size: 1.5rem;
+    width: 80%;
   }
   /* SKILLS for tablet */
   .skills__icon {
@@ -479,11 +491,19 @@
 }
 /* MEDIA QUERY FOR 900px */
 @media screen and (min-width: 900px) {
+  /* HOME */
+  .home__desc {
+    max-width: 60%;
+  }
   /* NAVBAR */
   .arrow-up {
     width: 5rem;
     height: 5rem;
-    margin: 2rem;
+    margin-bottom: 3rem;
+  }
+  /* ABOUT ME */
+  .aboutme__text {
+    max-width: 70%;
   }
   /* CONTACT */
   .contact__body {

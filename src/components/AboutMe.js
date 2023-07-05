@@ -6,8 +6,17 @@ const AboutMe = ( props, ref ) => {
     <div className="aboutme" ref={ref}>
       <Title>About Me</Title>
       <div className="aboutme__text">
-        <p>Lorem ipsum dolor sit amet. Et nihil minima sed dolorem ipsam et deleniti repudiandae et itaque labore 33 atque laborum est quis voluptatem. Est porro aspernatur vel molestias natus vel fugiat nobis ut aliquam dignissimos At enim recusandae!
-        Qui quam nihil et molestiae rerum sed ipsam nihil est modi dolorum ut ipsam dicta eum culpa quod. Est dolor expedita hic ducimus alias qui temporibus voluptate non tenetur modi rem cumque dolorem!
+        <p>
+          I am a California transplant currently living in Sweden with experience working in 
+          three countries (US, Japan, Estonia) in account management at a certification agency 
+          and in payment operations at a fintech prior to switching careers to web development.
+          I studied front-end development at Sundsgårdens Folkhögskola and am keen to start
+          a career in this field to work alongside amazing programmers and learn much more!
+        </p>
+
+        <p>
+          Outside of coding, I also love to dance and work with children! I taught children's ballet
+          and also volunteered as an English tutor, Japanese teacher, and reading coach.
         </p>
       </div>
     </div>
