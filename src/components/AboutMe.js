@@ -13,11 +13,6 @@ const AboutMe = ( props, ref ) => {
           I studied front-end development at Sundsgårdens Folkhögskola and am keen to start
           a career in this field to work alongside amazing programmers and learn much more!
         </p>
-
-        <p>
-          Outside of coding, I also love to dance and work with children! I taught children's ballet
-          and also volunteered as an English tutor, Japanese teacher, and reading coach.
-        </p>
       </div>
     </div>
   );

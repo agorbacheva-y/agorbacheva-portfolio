@@ -19,7 +19,7 @@ const Projects = ( props, ref ) => {
           <div className="project__overlay__text">
             <div className="project__title">
               <h4>SmartKids Learning Game</h4>
-              <p>A React game for young children to develop vocabulary
+              <p>A game created in React for young children to develop vocabulary
                 and shape recognition. Developed as a group project during 
                 Sundsgårdens IT course.
               </p>
@@ -53,7 +53,7 @@ const Projects = ( props, ref ) => {
           <div className="project__overlay__text">
             <div className="project__title">
               <h4>Trivia Game</h4>
-              <p>A React game using the Open Trivia DB API.
+              <p>A trivia game in React using the Open Trivia DB API.
               </p>
             </div>
             <div className="project__tech__container">
