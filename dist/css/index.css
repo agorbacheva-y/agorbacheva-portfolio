@@ -283,6 +283,10 @@
   margin: 0.5rem 1rem;
 }
 
+.disabled-link {
+  pointer-events: none;
+}
+
 /* CONTACT */
 .contact {
   text-align: center;

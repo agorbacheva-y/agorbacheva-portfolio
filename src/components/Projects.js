@@ -66,10 +66,10 @@ const Projects = ( props, ref ) => {
               direction="row" 
               justifyContent="center"
             >
-              <a href="#" target="blank">
+              <a href="#" className="disabled-link">
                 <CustomButton>Live site</CustomButton>
               </a>
-              <a href="#" target="blank">
+              <a href="https://github.com/agorbacheva-y/API.git" target="blank">
                 <CustomButton>Github</CustomButton>
               </a>
             </Stack>
