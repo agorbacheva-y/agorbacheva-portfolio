@@ -278,7 +278,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem;
 }
 
 .project__tech__button {
@@ -286,7 +285,7 @@
   color: v.$main-txt-color;
   border-radius: 20px;
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   margin: 0.5rem 1rem;
 }
 
