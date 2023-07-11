@@ -4,7 +4,7 @@ import Title from "./Title";
 import CustomTextField from "./CustomTextField";
 import CustomButton from "./CustomButton";
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/c27aab20-10dd-11ee-a6b0-17653bd30bd3";
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/d469c1c0-202a-11ee-a6b0-17653bd30bd3";
 
 const Contact = ( props, ref ) => {
   // store input
