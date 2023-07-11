@@ -315,6 +315,26 @@
   max-width: 80vw;
 }
 
+.submit-btn {
+  box-shadow: "none";
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #00CECB;
+  color: #333745;
+  font-family: League Spartan, sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.submit-btn :hover {
+  background-color: #00a5a2;
+  font-weight: 600;
+  border: none;
+  color: white;
+}
+
 /* FOOTER */
 .footer {
   display: flex;
