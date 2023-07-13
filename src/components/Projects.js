@@ -34,7 +34,7 @@ const Projects = ( props, ref ) => {
                 direction="row" 
                 justifyContent="center"
               >
-                <a href="https://trivia-quiz-agy.netlify.app/trivia" target="blank">
+                <a href="https://trivia-quiz-agy.netlify.app/" target="blank">
                   <CustomButton>Live site</CustomButton>
                 </a>
                 <a href="https://github.com/agorbacheva-y/API.git" target="blank">
@@ -55,9 +55,8 @@ const Projects = ( props, ref ) => {
               <div className="project__title">
                 <h4>SmartKids Learning Game</h4>
                 <p>A game created in React for young children to develop vocabulary
-                  and shape recognition. Created as a group project in 
-                  Sundsgårdens IT course. Features worked on: Register new user 
-                  (removed on live site), Body part game, Face part game
+                  and shape recognition. Group project in Sundsgårdens IT course. 
+                  Features worked on: Register new user (removed on live site), Body part game, Face part game
                 </p>
               </div>
               <div className="project__tech__container">
