@@ -54,9 +54,9 @@ const Projects = ( props, ref ) => {
             <div className="project__overlay__text">
               <div className="project__title">
                 <h4>SmartKids Learning Game</h4>
-                <p>A game created in React for young children to develop vocabulary
+                <p>A kids game created in React to develop vocabulary
                   and shape recognition. Group project in Sundsgårdens IT course. 
-                  Features worked on: Register new user (removed on live site), Body part game, Face part game
+                  Features worked on: Register new user (removed on live site), Body and Face part game
                 </p>
               </div>
               <div className="project__tech__container">
